@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="PaintFragment">
+
+    <com.example.iviku.MiniPaint
+        android:id="@+id/miniPaint"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_minipaint"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/btn_drawLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="line"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawCircle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
+
+    <TextView
+        android:id="@+id/btn_drawCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="circ"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawArc"
+        app:layout_constraintStart_toEndOf="@id/btn_drawLine"
+        app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
+
+    <TextView
+        android:id="@+id/btn_drawArc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="rect"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_drawCircle"
+        app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
+
+    <TextView
+        android:id="@+id/btn_delete"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="d e l e t e"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@drawable/shape_buttons"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawCircle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
