@@ -55,7 +55,7 @@
         android:id="@+id/btn_delete"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="d e l e t e"
         android:textColor="@color/white"
         android:textAlignment="center"
@@ -64,5 +64,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_drawCircle" />
+
+    <TextView
+        android:id="@+id/btn_save"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="g u a r d a r  y  e x p o r t a r"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@drawable/shape_buttons"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
