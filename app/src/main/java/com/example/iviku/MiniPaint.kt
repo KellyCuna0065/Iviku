@@ -23,8 +23,6 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-//        var iLine: Int = 0
-//        var iCircle: Int = 0
 
         for (line in lines) {
             canvas.drawLine(line.first.x, line.first.y, line.second.x, line.second.y, paint)
@@ -34,28 +32,13 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
             canvas.drawCircle(circle.first.x, circle.first.y, circle.second, paint)
         }
 
-       /* for (action in actions) {
-            when (action) {
-                1 -> {
-                    canvas.drawLine(lines[iLine].first.x, lines[iLine].first.y, lines[iLine].second.x, lines[iLine].second.y, paint)
-                    iLine += 1
-                }
-                2 -> {
-                    canvas.drawCircle(circles[iCircle].first.x, circles[iCircle].first.y, circles[iCircle].second, paint)
-                    iCircle += 1
-                }
-                3 -> {
-
-                }
-            }
-        }*/
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
 
         when (option) {
             1 -> {
-                when (event!!.action) {
+                when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
                         val startPoint = PointF(event.x, event.y)
                         lines.add(Pair(startPoint, PointF()))
@@ -70,7 +53,7 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
             }
 
             2 -> {
-                when (event!!.action) {
+                when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
                         val startPoint = PointF(event.x, event.y)
                         circles.add(Pair(startPoint, 0f))

@@ -3,18 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_programacion">
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:label="Home"
+        android:name="com.example.iviku.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_paint"
+            app:destination="@+id/nav_paint"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_paint"
+        android:label="Paint"
+        android:name="com.example.iviku.PaintFragment"
+        tools:layout="@layout/fragment_paint"/>
 
     <fragment
         android:id="@+id/nav_programacion"
         android:label="Programacion"
         android:name="com.example.iviku.ProgramacionFragment"
         tools:layout="@layout/fragment_programacion"/>
-
-    <fragment
-        android:id="@+id/nav_libre"
-        android:label="Libre"
-        android:name="com.example.iviku.PaintFragment"
-        tools:layout="@layout/fragment_paint"/>
 
 </navigation>
