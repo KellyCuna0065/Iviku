@@ -23,10 +23,4 @@
         android:name="com.example.iviku.PaintFragment"
         tools:layout="@layout/fragment_paint"/>
 
-    <fragment
-        android:id="@+id/nav_programacion"
-        android:label="Programacion"
-        android:name="com.example.iviku.ProgramacionFragment"
-        tools:layout="@layout/fragment_programacion"/>
-
 </navigation>

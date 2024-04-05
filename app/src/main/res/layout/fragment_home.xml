@@ -4,28 +4,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ivory"
     tools:context="HomeFragment">
 
     <TextView
         android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/replace_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="100dp"
+        android:background="@drawable/face_robot"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/btn_draw"
-        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:text="d i b u j a r "
-        android:textColor="@color/white"
+        android:layout_width="300dp"
+        android:text="dibujar"
+        android:layout_marginTop="100dp"
         android:gravity="center"
+        android:textAppearance="@style/botonG"
         android:background="@drawable/shape_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/btn_files"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="ver archivos"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAppearance="@style/botonG"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_draw" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

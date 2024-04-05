@@ -20,8 +20,8 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
         val navcontroller = findNavController()
 
-        val btn: TextView = binding.btnDraw
-        btn.setOnClickListener() {
+        val btndraw: TextView = binding.btnDraw
+        btndraw.setOnClickListener() {
             navcontroller.navigate(HomeFragmentDirections.actionNavHomeToNavPaint())
         }
 

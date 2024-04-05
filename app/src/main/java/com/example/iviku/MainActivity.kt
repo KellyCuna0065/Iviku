@@ -24,14 +24,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
-        
+
+        val fm = FileManager()
+        val folderName = "/storage/emulated/0/IVIKU"
+        if (!fm.doesDirectoryExist(folderName))     fm.createFolder(folderName)
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_home, R.id.nav_paint, R.id.nav_programacion), drawerLayout)
+            setOf(R.id.nav_home, R.id.nav_paint), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
