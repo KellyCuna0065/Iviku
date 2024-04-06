@@ -11,13 +11,13 @@
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="botonM">
+    <!--<style name="botonM">
 
     </style>
 
     <style name="botonS">
 
-    </style>
+    </style>-->
 
     <style name="theme_navheader" parent="@style/ThemeOverlay.AppCompat.Dark">
         <item name="android:fontFamily">@font/consolas_bold</item>

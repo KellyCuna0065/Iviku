@@ -2,6 +2,7 @@ package com.example.iviku
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.RelativeLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -27,17 +28,19 @@ class MainActivity : AppCompatActivity() {
 
         val fm = FileManager()
         val folderName = "/storage/emulated/0/IVIKU"
-        if (!fm.doesDirectoryExist(folderName))     fm.createFolder(folderName)
+        if (!fm.doesDirectoryExist(folderName)) {
+            fm.createFolder(folderName)
+        }
 
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
+        //val relativeLayout: RelativeLayout = binding.relativeLayout
+        //val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_home, R.id.nav_paint), drawerLayout)
+            setOf(R.id.nav_home, R.id.nav_paint))
         setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        //navView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

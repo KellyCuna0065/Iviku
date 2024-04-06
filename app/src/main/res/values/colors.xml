@@ -9,7 +9,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#797574</color>
-    <color name="gray_variant">##686564</color>
+    <color name="gray_variant">#686564</color>
     <color name="puce">#98705D</color>
     <color name="puce_variant">#7E5D4E</color>
     <color name="sun">#BF7A2B</color>
