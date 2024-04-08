@@ -1,25 +1,29 @@
 package com.example.iviku
 
+import android.util.Log
 import java.io.File
 import java.io.IOException
 
 class FileManager {
 
+    lateinit var content: List<String>
+
     fun createFolder(folderName: String): Boolean {
         val folder = File(folderName)
 
         return try {
-            folder.mkdirs()
+            folder.mkdir()
+            Log.i("FILE MANAGER", "Folder created!")
             true
         } catch (e: IOException) {
             e.printStackTrace()
+            Log.i("FILE MANAGER", "Folder not created :c")
             false
         }
     }
 
-    fun createFile(fileName: String, content: List<String>): Boolean {
+    fun createFile(fileName: String): Boolean {
         val file = File(fileName)
-
         return try {
             file.bufferedWriter().use { writer ->
                 for (line in content) {

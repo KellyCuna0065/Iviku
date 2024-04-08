@@ -1,8 +1,11 @@
 package com.example.iviku
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.RelativeLayout
+import android.widget.Toolbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -27,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         val fm = FileManager()
-        val folderName = "/storage/emulated/0/IVIKU"
+        val folderName = "/storage/emulated/0/Documents/IVIKU"
         if (!fm.doesDirectoryExist(folderName)) {
             fm.createFolder(folderName)
         }
@@ -44,9 +47,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val fm = FileManager()
+
+        when (item.itemId) {
+            R.id.action_save -> fm.createFile("")
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {

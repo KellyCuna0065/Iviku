@@ -10,7 +10,7 @@
     <com.example.iviku.MiniPaint
         android:id="@+id/miniPaint"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:layout_margin="10dp"
         android:background="@drawable/shape_minipaint"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,64 +20,82 @@
         android:id="@+id/btn_drawLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         app:drawableStartCompat="@drawable/line"
-        android:textColor="@color/white"
         android:background="@drawable/shape_buttons"
-        app:layout_constraintEnd_toStartOf="@id/btn_drawCircle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
-
-    <TextView
-        android:id="@+id/btn_drawCircle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/shape_buttons"
-        app:drawableStartCompat="@drawable/circle"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/btn_drawArc"
-        app:layout_constraintStart_toEndOf="@id/btn_drawLine"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
 
     <TextView
         android:id="@+id/btn_drawArc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:drawableStartCompat="@drawable/rectangle"
-        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        app:drawableStartCompat="@drawable/curve"
         android:background="@drawable/shape_buttons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_drawCircle"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawCircle"
+        app:layout_constraintStart_toEndOf="@id/btn_drawLine"
         app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
 
     <TextView
-        android:id="@+id/btn_delete"
-        android:layout_width="300dp"
+        android:id="@+id/btn_drawCircle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="d e l e t e"
-        android:textColor="@color/white"
-        android:textAlignment="center"
+        android:layout_marginTop="40dp"
         android:background="@drawable/shape_buttons"
-        android:backgroundTint="@color/black"
+        app:drawableStartCompat="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_drawArc"
+        app:layout_constraintTop_toBottomOf="@+id/miniPaint" />
+
+    <TextView
+        android:id="@+id/btn_drawRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:drawableStartCompat="@drawable/rectangle"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawOval"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawLine" />
+
+    <TextView
+        android:id="@+id/btn_drawOval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_buttons"
+        app:drawableStartCompat="@drawable/oval"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawTriangle"
+        app:layout_constraintStart_toEndOf="@id/btn_drawRect"
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawArc" />
+
+    <TextView
+        android:id="@+id/btn_drawTriangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:drawableStartCompat="@drawable/triangle"
+        android:background="@drawable/shape_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_drawOval"
         app:layout_constraintTop_toBottomOf="@+id/btn_drawCircle" />
 
     <TextView
-        android:id="@+id/btn_save"
-        android:layout_width="300dp"
+        android:id="@+id/btn_delete"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="g u a r d a r  y  e x p o r t a r"
-        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:text="@string/action_eliminar"
+        android:fontFamily="@font/consolas_bold"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/sun"
+        android:textSize="18sp"
         android:background="@drawable/shape_buttons"
-        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawOval" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

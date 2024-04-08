@@ -5,6 +5,9 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -48,6 +51,11 @@ class PaintFragment : Fragment() {
 
         return root
     }
+
+    /*override fun onResume() {
+        super.onResume()
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()
