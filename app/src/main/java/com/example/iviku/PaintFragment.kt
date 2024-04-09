@@ -31,18 +31,33 @@ class PaintFragment : Fragment() {
         val line: TextView = binding.btnDrawLine
         val circle: TextView = binding.btnDrawCircle
         val arc: TextView = binding.btnDrawArc
+        val rectangle: TextView = binding.btnDrawRect
+        val triangle: TextView = binding.btnDrawTriangle
+        val free: TextView = binding.btnDrawFree
         val delete: TextView = binding.btnDelete
 
         line.setOnClickListener() {
             miniPaint.option = 1
         }
 
-        circle.setOnClickListener() {
+        arc.setOnClickListener() {
             miniPaint.option = 2
         }
 
-        arc.setOnClickListener() {
+        circle.setOnClickListener() {
             miniPaint.option = 3
+        }
+
+        rectangle.setOnClickListener {
+            miniPaint.option = 4
+        }
+
+        triangle.setOnClickListener {
+            miniPaint.option = 5
+        }
+
+        free.setOnClickListener {
+            miniPaint.option = 6
         }
 
         delete.setOnClickListener() {
