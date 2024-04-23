@@ -56,16 +56,16 @@
         android:layout_marginTop="25dp"
         app:drawableStartCompat="@drawable/rectangle"
         android:background="@drawable/shape_buttons"
-        app:layout_constraintEnd_toStartOf="@id/btn_drawTriangle"
+        app:layout_constraintEnd_toStartOf="@id/btn_drawOval"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_drawLine" />
 
     <TextView
-        android:id="@+id/btn_drawTriangle"
+        android:id="@+id/btn_drawOval"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        app:drawableStartCompat="@drawable/triangle"
+        app:drawableStartCompat="@drawable/oval"
         android:background="@drawable/shape_buttons"
         app:layout_constraintEnd_toStartOf="@id/btn_drawFree"
         app:layout_constraintStart_toEndOf="@id/btn_drawRect"
@@ -79,7 +79,7 @@
         android:background="@drawable/shape_buttons"
         app:drawableStartCompat="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_drawTriangle"
+        app:layout_constraintStart_toEndOf="@id/btn_drawOval"
         app:layout_constraintTop_toBottomOf="@+id/btn_drawCircle" />
 
     <TextView
@@ -96,6 +96,6 @@
         android:background="@drawable/shape_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_drawTriangle" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_drawOval" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

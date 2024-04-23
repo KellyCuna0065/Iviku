@@ -32,7 +32,7 @@ class PaintFragment : Fragment() {
         val circle: TextView = binding.btnDrawCircle
         val arc: TextView = binding.btnDrawArc
         val rectangle: TextView = binding.btnDrawRect
-        val triangle: TextView = binding.btnDrawTriangle
+        val oval: TextView = binding.btnDrawOval
         val free: TextView = binding.btnDrawFree
         val delete: TextView = binding.btnDelete
 
@@ -52,7 +52,7 @@ class PaintFragment : Fragment() {
             miniPaint.option = 4
         }
 
-        triangle.setOnClickListener {
+        oval.setOnClickListener {
             miniPaint.option = 5
         }
 

@@ -5,9 +5,4 @@
         android:id="@+id/action_save"
         android:icon="@drawable/save"
         android:title="@string/action_guardar"/>
-
-    <item
-        android:id="@+id/action_delete"
-        android:icon="@drawable/delete"
-        android:title="@string/action_eliminar"/>
 </menu>
