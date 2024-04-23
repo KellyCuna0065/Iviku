@@ -25,7 +25,7 @@
         android:layout_marginTop="100dp"
         android:gravity="center"
         android:textAppearance="@style/botonG"
-        android:background="@drawable/shape_buttons"
+        android:background="@drawable/button_off"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
@@ -38,7 +38,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textAppearance="@style/botonG"
-        android:background="@drawable/shape_buttons"
+        android:background="@drawable/button_off"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_draw" />

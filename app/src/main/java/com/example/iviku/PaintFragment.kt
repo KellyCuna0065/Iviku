@@ -37,6 +37,7 @@ class PaintFragment : Fragment() {
         val delete: TextView = binding.btnDelete
 
         line.setOnClickListener() {
+
             miniPaint.option = 1
         }
 

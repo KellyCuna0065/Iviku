@@ -43,7 +43,7 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
         }
 
         for (arc in arcs) {
-            canvas.drawArc(getRectF(arc.first, arc.second), 0f, arc.third, false, paint)
+            canvas.drawArc(getRectF(arc.first, arc.second), arc.third, 90f, false, paint)
         }
 
         for (oval in ovals) {
@@ -86,9 +86,9 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
                     MotionEvent.ACTION_MOVE -> {
                         lastIndex = arcs.lastIndex
                         val currentArc = arcs[lastIndex]
-                        val radius = calculateRadius(currentArc.first, PointF(event.x, event.y))
-                        val sweepAngle = calculateSweepAngle(currentArc.first, PointF(event.x, event.y))
-                        arcs[lastIndex] = Triple(currentArc.first, radius, sweepAngle)
+                        radius = calculateRadius(currentArc.first, PointF(event.x, event.y))
+                        val startAngle = calculateAngle(currentArc.first, PointF(event.x, event.y))
+                        arcs[lastIndex] = Triple(currentArc.first, radius, startAngle)
                         invalidate()
                     }
                 }
@@ -186,12 +186,12 @@ class MiniPaint (context: Context, attrs: AttributeSet? = null) : View(context, 
         return PointF(startPoint.x - endPoint.x, startPoint.y - endPoint.y).length()
     }
 
-    /*private fun calculateAngle(startPoint: PointF, endPoint: PointF): Float {
+    private fun calculateAngle(startPoint: PointF, endPoint: PointF): Float {
         val dx = endPoint.x - startPoint.x
         val dy = endPoint.y - startPoint.y
         val angle = Math.toDegrees(atan2(dy.toDouble(), dx.toDouble())).toFloat()
-        return
-    }*/
+        return angle
+    }
 
     private fun calculateSweepAngle(startPoint: PointF, endPoint: PointF): Float {
         val dx = endPoint.x - startPoint.x
